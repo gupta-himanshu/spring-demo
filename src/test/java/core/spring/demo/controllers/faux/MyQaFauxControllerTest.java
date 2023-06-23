@@ -1,20 +1,19 @@
-package core.spring.demo.controllers.i18n;
+package core.spring.demo.controllers.faux;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-@ActiveProfiles({"ES", "dev"})
+@ActiveProfiles({"qa", "EN"})
 @SpringBootTest
-class Myi18NControllerTestES {
+class MyQaFauxControllerTest {
 
     @Autowired
-    Myi18NController myi18NController;
+    MyFauxController myFauxController;
 
     @Test
-    void sayHello() {
-        System.out.println(myi18NController.sayHello());
+    void getDataSource() {
+        System.out.println(myFauxController.getDataSource());
     }
-
 }
